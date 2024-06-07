@@ -25,4 +25,19 @@ class MyTodoController {
     fun findAll(): Flux<MyTodo> {
         return myTodoRepository.findAll()
     }
+
+    @GetMapping("/{id}")
+    fun findById(@PathVariable id: Long): Mono<MyTodo> {
+        return myTodoRepository.findById(id)
+    }
+
+    @PutMapping("/{id}")
+    fun updateTodo(@PathVariable id: Long, @RequestBody myTodo: MyTodo): Mono<MyTodo> {
+        return myTodoRepository.save(myTodo)
+    }
+
+    @DeleteMapping("/{id}")
+    fun deleteTodo(@PathVariable id: Long): Mono<MyTodo> {
+        return myTodoRepository.deleteById(id)
+    }
 }

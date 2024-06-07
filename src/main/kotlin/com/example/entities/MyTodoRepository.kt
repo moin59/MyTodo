@@ -11,4 +11,5 @@ interface MyTodoRepository : R2dbcRepository<MyTodo, Int> {
 
     @Query("SELECT * FROM todos")
     fun findAllTodos(limit: Int, offset: Int): Flux<MyTodo>
+    abstract fun deleteById(id: Long): Mono<MyTodo>
 }
