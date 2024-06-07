@@ -33,11 +33,26 @@ class MyTodoController {
 
     @PutMapping("/{id}")
     fun updateTodo(@PathVariable id: Long, @RequestBody myTodo: MyTodo): Mono<MyTodo> {
-        return myTodoRepository.save(myTodo)
+        val oldTodo = myTodoRepository.findById(id)
+        println(oldTodo)
+
+        if (oldTodo == null) {
+            return myTodoRepository.save(myTodo)
+        }else{
+            return Mono.empty()
+        }
     }
 
     @DeleteMapping("/{id}")
     fun deleteTodo(@PathVariable id: Long): Mono<MyTodo> {
-        return myTodoRepository.deleteById(id)
+
+        val oldTodo = myTodoRepository.findById(id)
+
+        if (oldTodo != null) {
+            return myTodoRepository.deleteById(id)
+        }else{
+            return Mono.empty()
+        }
+
     }
 }
