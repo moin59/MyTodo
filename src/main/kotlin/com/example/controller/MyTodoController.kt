@@ -1,10 +1,12 @@
 package com.example.controller
 
 import com.example.dto.MyTodoDTO
+import com.example.entity.MyTodo
 
 import com.example.service.MyTodoService
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
+import java.util.*
 
 
 @RestController
@@ -17,42 +19,23 @@ class MyTodoController(val myTodoService: MyTodoService) {
         return myTodoService.createTodo(myTodoDTO)
     }
 
-//    @GetMapping
-//    fun getAllTodos(): MutableIterable<MyTodo> = myTodoService.getAllTodos()
+    @GetMapping
+    fun getAllTodos(): List<MyTodoDTO> = myTodoService.getAllTodos()
 
+    @GetMapping("/{id}")
+    fun getTodoById(@PathVariable("id") id: Int): Optional<MyTodo> {
+        return myTodoService.getTodo(id)
+    }
 
+    @PutMapping("/{id}")
+    fun updateTodo(@RequestBody myTodoDTO: MyTodoDTO, @PathVariable("id") id: Int): MyTodoDTO {
+        return myTodoService.updateTodo(id, myTodoDTO)
+    }
 
-//    fun findAll(): Flux<MyTodo> {
-//        return myTodoRepository.findAll()
-//    }
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun deleteTodo(@PathVariable("id") id: Int): Any {
 
-//    @GetMapping("/{id}")
-//    fun findById(@PathVariable id: Long): Mono<MyTodo> {
-//        return myTodoRepository.findById(id)
-//    }
-//
-//    @PutMapping("/{id}")
-//    fun updateTodo(@PathVariable id: Long, @RequestBody myTodo: MyTodo): Mono<MyTodo> {
-//        val oldTodo = myTodoRepository.findById(id)
-//        println(oldTodo)
-//
-//        if (oldTodo == null) {
-//            return myTodoRepository.save(myTodo)
-//        }else{
-//            return Mono.empty()
-//        }
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    fun deleteTodo(@PathVariable id: Long): Mono<MyTodo> {
-//
-//        val oldTodo = myTodoRepository.findById(id)
-//
-//        if (oldTodo != null) {
-//            return myTodoRepository.deleteById(id)
-//        }else{
-//            return Mono.empty()
-//        }
-//
-//    }
+        return myTodoService.deleteTodo(id)
+    }
 }
