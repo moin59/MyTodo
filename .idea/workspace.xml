@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de1c1a71-a307-4ec7-96fb-6485b17fe944" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/controller/MyTodoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/controller/TodoController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/dto/MyTodoDTO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/dto/TodoDTO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/entity/MyTodo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/entity/Todo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/repository/MyTodoRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/repository/TodoRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/service/MyTodoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/service/TodoService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/intg/com/example/controller/MyTodoControllerIntgTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/intg/com/example/controller/TodoControllerIntgTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/intg/com/example/util/TestUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/intg/com/example/util/TestUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/example/MyTodoApplicationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/example/TodoApplicationTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +167,7 @@
       <workItem from="1717844409728" duration="3909000" />
       <workItem from="1717963720450" duration="2030000" />
       <workItem from="1717969876500" duration="2839000" />
-      <workItem from="1718052350855" duration="3696000" />
+      <workItem from="1718052350855" duration="4159000" />
     </task>
     <servers />
   </component>
