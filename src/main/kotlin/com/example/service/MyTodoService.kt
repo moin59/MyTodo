@@ -9,12 +9,12 @@ import java.util.*
 @Service
 class MyTodoService(val myTodoRepository: MyTodoRepository) {
 
-
     fun createTodo(myTodoDTO: MyTodoDTO): MyTodoDTO{
 
         val todoEntity = myTodoDTO.let {
             MyTodo(null, it.title, it.description)
         }
+
         myTodoRepository.save(todoEntity)
 
         return todoEntity.let {
