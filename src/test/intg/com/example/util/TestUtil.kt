@@ -1,8 +1,8 @@
 package com.example.util
 
-import com.example.entity.MyTodo
+import com.example.entity.Todo
 
-fun myTodoEntityList() = listOf(
-    MyTodo(null, "New Todo", "Test Description"),
-    MyTodo(null, "Second Todo", "Test Description"),
+fun todoEntityList() = listOf(
+    Todo(null, "New Todo", "Test Description"),
+    Todo(null, "Second Todo", "Test Description"),
 )

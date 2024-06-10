@@ -5,12 +5,11 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.Table
-import org.hibernate.proxy.HibernateProxy
 
 
 @Entity
 @Table(name = "todos")
-data class MyTodo(
+data class Todo(
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
