@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de1c1a71-a307-4ec7-96fb-6485b17fe944" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/intg/com/example/controller/TodoControllerIntgTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/intg/com/example/controller/TodoControllerIntgTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/intg/com/example/util/TestUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/intg/com/example/util/TestUtil.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +73,9 @@
     "Gradle.Build MyTodo.executor": "Run",
     "Gradle.Build myTodo.executor": "Run",
     "Gradle.MyTodoControllerIntgTest.addTodoTest.executor": "Run",
+    "Gradle.TodoControllerIntgTest.getAllTodos.executor": "Debug",
+    "Gradle.TodoControllerIntgTest.getAllTodosTest.executor": "Run",
+    "Gradle.TodoControllerIntgTest.getTodosTest.executor": "Run",
     "Kotlin.MyTodoApplicationKt.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -94,6 +102,9 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/intg/com/example/controller/utl" />
@@ -103,7 +114,7 @@
       <recent name="com.example.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MyTodoApplication">
+  <component name="RunManager" selected="Gradle.TodoControllerIntgTest.getAllTodosTest">
     <configuration name="MyTodoControllerIntgTest.addTodoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -118,6 +129,78 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.example.controller.MyTodoControllerIntgTest.addTodoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoControllerIntgTest.getAllTodos" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.controller.TodoControllerIntgTest.getAllTodos&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoControllerIntgTest.getAllTodosTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.controller.TodoControllerIntgTest.getAllTodosTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoControllerIntgTest.getTodosTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--scan" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.controller.TodoControllerIntgTest.getTodosTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -144,6 +227,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TodoControllerIntgTest.getAllTodosTest" />
+        <item itemvalue="Gradle.TodoControllerIntgTest.getAllTodos" />
+        <item itemvalue="Gradle.TodoControllerIntgTest.getTodosTest" />
         <item itemvalue="Gradle.MyTodoControllerIntgTest.addTodoTest" />
         <item itemvalue="Kotlin.MyTodoApplicationKt" />
       </list>
@@ -167,11 +253,24 @@
       <workItem from="1717844409728" duration="3909000" />
       <workItem from="1717963720450" duration="2030000" />
       <workItem from="1717969876500" duration="2839000" />
-      <workItem from="1718052350855" duration="4159000" />
+      <workItem from="1718052350855" duration="4719000" />
+      <workItem from="1718223930200" duration="1894000" />
+      <workItem from="1718309965791" duration="1693000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

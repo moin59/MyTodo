@@ -4,6 +4,7 @@ import com.example.dto.TodoDTO
 import com.example.repository.TodoRepository
 import com.example.util.todoEntityList
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -11,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.reactive.server.WebTestClient
+import org.springframework.test.web.reactive.server.expectBodyList
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -48,5 +50,20 @@ class TodoControllerIntgTest {
         Assertions.assertTrue{
             savedTodoDTO!!.id != null
         }
+    }
+
+    @Test
+    fun getAllTodosTest() {
+        val todoDTOs = webTestClient
+            .get()
+            .uri("/todos")
+            .exchange()
+            .expectStatus().isOk
+            .expectBodyList(TodoDTO::class.java)
+            .returnResult()
+            .responseBody
+
+        assertEquals(3, todoDTOs!!.size)
+
     }
 }
