@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.Table
 
-
+// database a table, collumn create korar jonno
 @Entity
 @Table(name = "todos")
 data class Todo(

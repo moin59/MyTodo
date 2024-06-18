@@ -1,6 +1,7 @@
 package com.example.controller
 
 import com.example.dto.TodoDTO
+import com.example.entity.Todo
 import com.example.repository.TodoRepository
 import com.example.util.todoEntityList
 import org.junit.jupiter.api.Assertions
@@ -12,7 +13,6 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.reactive.server.WebTestClient
-import org.springframework.test.web.reactive.server.expectBodyList
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -65,5 +65,36 @@ class TodoControllerIntgTest {
 
         assertEquals(3, todoDTOs!!.size)
 
+    }
+
+    @Test
+    fun updateTodoTest() {
+        val todo = Todo(null, "Test todo", "Test Description")
+        todoRepository.save(todo)
+        val todoDTO = TodoDTO(null, "Test todo1", "Test Description")
+
+        val updatedTodoDTO = webTestClient
+            .put()
+            .uri("/todos/{id}", todo.id)
+            .bodyValue(todoDTO)
+            .exchange()
+            .expectStatus().isOk
+            .expectBodyList(TodoDTO::class.java)
+            .returnResult()
+            .responseBody
+
+        assertEquals("Test todo", todo!!.title)
+    }
+
+    @Test
+    fun deleteTodoTest() {
+        val todo = Todo(1, "Test todo", "Test Description")
+        todoRepository.save(todo)
+
+        val updatedTodo = webTestClient
+            .delete()
+            .uri("/todos/{id}", todo.id)
+            .exchange()
+            .expectStatus().isNoContent
     }
 }
