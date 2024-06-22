@@ -4,18 +4,21 @@ import com.example.dto.TodoDTO
 import com.example.entity.Todo
 
 import com.example.service.TodoService
+import jakarta.validation.Valid
 import org.springframework.http.HttpStatus
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
 import java.util.*
 
 
 @RestController
 @RequestMapping("/todos")
+@Validated
 class TodoController(val todoService: TodoService) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun createTodo(@RequestBody todoDTO: TodoDTO): TodoDTO {
+    fun createTodo(@RequestBody @Valid todoDTO: TodoDTO): TodoDTO {
         return todoService.createTodo(todoDTO)
     }
 
