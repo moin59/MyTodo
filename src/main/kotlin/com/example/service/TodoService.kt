@@ -2,6 +2,7 @@ package com.example.service
 
 import com.example.dto.TodoDTO
 import com.example.entity.Todo
+import com.example.exception.TodoNotFoundException
 import com.example.repository.TodoRepository
 import org.springframework.stereotype.Service
 import java.util.*
@@ -44,7 +45,7 @@ class TodoService(val todoRepository: TodoRepository) {
                 TodoDTO(it.id, it.title.toString(), it.description.toString())
             }
         }else{
-            throw Exception("Todo not found")
+            throw TodoNotFoundException("No Todo found for the id: $id")
         }
     }
 

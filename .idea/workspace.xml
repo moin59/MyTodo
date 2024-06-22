@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de1c1a71-a307-4ec7-96fb-6485b17fe944" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/dto/TodoDTO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/dto/TodoDTO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/entity/Todo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/entity/Todo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/repository/TodoRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/repository/TodoRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/intg/com/example/controller/TodoControllerIntgTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/intg/com/example/controller/TodoControllerIntgTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/service/TodoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/service/TodoService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,43 +63,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Gradle.Build MyTodo.executor": "Run",
-    "Gradle.Build myTodo.executor": "Run",
-    "Gradle.MyTodoControllerIntgTest.addTodoTest.executor": "Run",
-    "Gradle.TodoControllerIntgTest.deleteTodoTest.executor": "Run",
-    "Gradle.TodoControllerIntgTest.getAllTodos.executor": "Debug",
-    "Gradle.TodoControllerIntgTest.getAllTodosTest.executor": "Run",
-    "Gradle.TodoControllerIntgTest.getTodosTest.executor": "Run",
-    "Gradle.TodoControllerIntgTest.updateTodoTest.executor": "Run",
-    "Kotlin.MyTodoApplicationKt.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.MyTodoApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/moin/projects/Kotlin/MyTodo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build MyTodo.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build myTodo.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MyTodoControllerIntgTest.addTodoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TodoControllerIntgTest.deleteTodoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TodoControllerIntgTest.getAllTodos.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.TodoControllerIntgTest.getAllTodosTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TodoControllerIntgTest.getTodosTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TodoControllerIntgTest.updateTodoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MyTodoApplicationKt.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MyTodoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/moin/projects/Kotlin/MyTodo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
     ],
-    "kotlin-gradle-user-dirs": [
-      "/Users/moin/.gradle"
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;/Users/moin/.gradle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -111,12 +107,15 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/intg/com/example/controller/utl" />
     </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="com.example.exception" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.example.controller" />
       <recent name="com.example.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TodoControllerIntgTest.deleteTodoTest">
+  <component name="RunManager" selected="Spring Boot.MyTodoApplication">
     <configuration name="TodoControllerIntgTest.deleteTodoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -276,7 +275,8 @@
       <workItem from="1718223930200" duration="1894000" />
       <workItem from="1718309965791" duration="2119000" />
       <workItem from="1718401086117" duration="921000" />
-      <workItem from="1718743494774" duration="748000" />
+      <workItem from="1718743494774" duration="2402000" />
+      <workItem from="1719090535755" duration="247000" />
     </task>
     <servers />
   </component>
