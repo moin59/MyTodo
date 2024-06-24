@@ -23,7 +23,7 @@ class TodoController(val todoService: TodoService) {
     }
 
     @GetMapping
-    fun getAllTodos(): List<TodoDTO> = todoService.getAllTodos()
+    fun getAllTodos(@RequestParam("todo_title", required = false) todoTitle: String?): List<TodoDTO> = todoService.getAllTodos(todoTitle)
 
     @GetMapping("/{id}")
     fun getTodoById(@PathVariable("id") id: Int): Optional<Todo> {

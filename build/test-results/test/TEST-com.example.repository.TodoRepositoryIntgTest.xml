@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.repository.TodoRepositoryIntgTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-24T21:03:14" hostname="Mds-MacBook-Pro" time="0.493">
+<testsuite name="com.example.repository.TodoRepositoryIntgTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-24T21:10:20" hostname="Mds-MacBook-Pro" time="0.534">
   <properties/>
-  <testcase name="findByTitleContaining()" classname="com.example.repository.TodoRepositoryIntgTest" time="0.493"/>
-  <system-out><![CDATA[23:03:11.714 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.repository.TodoRepositoryIntgTest]: TodoRepositoryIntgTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:03:11.955 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.MyTodoApplication for test class com.example.repository.TodoRepositoryIntgTest
+  <testcase name="findTodoByTitle()" classname="com.example.repository.TodoRepositoryIntgTest" time="0.534"/>
+  <system-out><![CDATA[23:10:18.400 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.repository.TodoRepositoryIntgTest]: TodoRepositoryIntgTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:10:18.647 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.MyTodoApplication for test class com.example.repository.TodoRepositoryIntgTest
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -13,31 +13,32 @@
 
  :: Spring Boot ::                (v3.3.0)
 
-2024-06-24T23:03:12.285+02:00  INFO 3559 --- [MyTodo] [    Test worker] c.e.repository.TodoRepositoryIntgTest    : Starting TodoRepositoryIntgTest using Java 17.0.11 with PID 3559 (started by moin in /Users/moin/projects/Kotlin/MyTodo)
-2024-06-24T23:03:12.286+02:00  INFO 3559 --- [MyTodo] [    Test worker] c.e.repository.TodoRepositoryIntgTest    : The following 1 profile is active: "test"
-2024-06-24T23:03:12.519+02:00  INFO 3559 --- [MyTodo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-24T23:03:12.621+02:00  INFO 3559 --- [MyTodo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
-2024-06-24T23:03:12.660+02:00  INFO 3559 --- [MyTodo] [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
-2024-06-24T23:03:12.760+02:00  INFO 3559 --- [MyTodo] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:0f84a004-648f-4423-92c0-a64e66a5a743;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-06-24T23:03:12.956+02:00  INFO 3559 --- [MyTodo] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-24T23:03:12.995+02:00  INFO 3559 --- [MyTodo] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-24T23:03:13.018+02:00  INFO 3559 --- [MyTodo] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-06-24T23:03:13.213+02:00  INFO 3559 --- [MyTodo] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-24T23:03:13.244+02:00  WARN 3559 --- [MyTodo] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-24T23:03:13.755+02:00  INFO 3559 --- [MyTodo] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-24T23:10:18.983+02:00  INFO 3856 --- [MyTodo] [    Test worker] c.e.repository.TodoRepositoryIntgTest    : Starting TodoRepositoryIntgTest using Java 17.0.11 with PID 3856 (started by moin in /Users/moin/projects/Kotlin/MyTodo)
+2024-06-24T23:10:18.984+02:00  INFO 3856 --- [MyTodo] [    Test worker] c.e.repository.TodoRepositoryIntgTest    : The following 1 profile is active: "test"
+2024-06-24T23:10:19.245+02:00  INFO 3856 --- [MyTodo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-24T23:10:19.404+02:00  INFO 3856 --- [MyTodo] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 1 JPA repository interface.
+2024-06-24T23:10:19.451+02:00  INFO 3856 --- [MyTodo] [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-24T23:10:19.577+02:00  INFO 3856 --- [MyTodo] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:cb775f8c-5dd7-42fe-b1b9-9ae6746cd75c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-24T23:10:19.771+02:00  INFO 3856 --- [MyTodo] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-24T23:10:19.812+02:00  INFO 3856 --- [MyTodo] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-24T23:10:19.836+02:00  INFO 3856 --- [MyTodo] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-24T23:10:20.024+02:00  INFO 3856 --- [MyTodo] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-24T23:10:20.058+02:00  WARN 3856 --- [MyTodo] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-24T23:10:20.573+02:00  INFO 3856 --- [MyTodo] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: drop table if exists todos cascade 
 Hibernate: drop sequence if exists todos_seq
 Hibernate: create sequence todos_seq start with 1 increment by 50
 Hibernate: create table todos (id integer not null, description varchar(255), title varchar(255), primary key (id))
-2024-06-24T23:03:13.777+02:00  INFO 3559 --- [MyTodo] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-24T23:03:14.074+02:00  INFO 3559 --- [MyTodo] [    Test worker] c.e.repository.TodoRepositoryIntgTest    : Started TodoRepositoryIntgTest in 2.015 seconds (process running for 3.097)
+2024-06-24T23:10:20.598+02:00  INFO 3856 --- [MyTodo] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-24T23:10:20.877+02:00  INFO 3856 --- [MyTodo] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-24T23:10:20.914+02:00  INFO 3856 --- [MyTodo] [    Test worker] c.e.repository.TodoRepositoryIntgTest    : Started TodoRepositoryIntgTest in 2.162 seconds (process running for 3.218)
 Hibernate: select t1_0.id,t1_0.description,t1_0.title from todos t1_0
 Hibernate: select next value for todos_seq
 Hibernate: select next value for todos_seq
 Hibernate: insert into todos (description,title,id) values (?,?,?)
 Hibernate: insert into todos (description,title,id) values (?,?,?)
 Hibernate: insert into todos (description,title,id) values (?,?,?)
-Hibernate: select t1_0.id,t1_0.description,t1_0.title from todos t1_0 where t1_0.title like ? escape '\'
+Hibernate: select * from todos where title like ?
 todos: [Todo(id=1, title=New Todo, description=Test Description)]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

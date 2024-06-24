@@ -23,7 +23,12 @@ class TodoService(val todoRepository: TodoRepository) {
         }
     }
 
-    fun getAllTodos(): List<TodoDTO>{
+    fun getAllTodos(todoTitle: String?): List<TodoDTO>{
+
+        val todo =todoTitle?.let {
+            todoRepository.findTodoByTitle(todoTitle)
+        } ?: todoRepository.findAll()
+
         return todoRepository.findAll().map {
             TodoDTO(it.id, it.title.toString(), it.description.toString())
         }

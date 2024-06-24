@@ -34,5 +34,15 @@ class TodoRepositoryIntgTest {
 
     }
 
+    @Test
+    fun findTodoByTitle() {
+
+        val todos = todoRepository.findTodoByTitle("New Todo")
+        println("todos: $todos")
+
+        Assertions.assertEquals(1, todos.size)
+
+    }
+
 
 }
