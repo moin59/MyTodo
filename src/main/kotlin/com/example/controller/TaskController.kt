@@ -14,6 +14,6 @@ class TaskController(val taskService: TaskService) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun createTask(@RequestBody taskDTO: TaskDTO) = taskService.createTask(taskDTO)
+    fun createTask(@RequestBody taskDTO: TaskDTO): TaskDTO = taskService.createTask(taskDTO)
 
 }

@@ -1,6 +1,7 @@
 package com.example.entity
 
 import jakarta.persistence.*
+import org.hibernate.proxy.HibernateProxy
 
 @Entity
 @Table(name = "tasks")
@@ -8,10 +9,10 @@ data class Task(
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Int?,
+    var id: Int?,
     var name: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "todo_id", nullable = false)
-    var todo: Todo? = null
+    @JoinColumn(name = "todoId")
+    val todo: Todo? = null
 )

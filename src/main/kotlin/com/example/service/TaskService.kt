@@ -2,13 +2,23 @@ package com.example.service
 
 import com.example.dto.TaskDTO
 import com.example.entity.Task
+import com.example.exception.TodoNotValidException
 import com.example.repository.TaskRespository
+import mu.KLogging
 import org.springframework.stereotype.Service
 
 @Service
-class TaskService(val taskRespository: TaskRespository) {
+class TaskService(val taskRespository: TaskRespository,
+    val todoService: TodoService) {
+
+    companion object: KLogging()
 
     fun createTask(taskDTO: TaskDTO): TaskDTO {
+
+        val taskOptional = todoService.findByTodoId(taskDTO.todoId!!)
+        if(!taskOptional.isPresent) {
+            throw TodoNotValidException("Todo not valid")
+        }
 
        val taskEntity = taskDTO.let {
             Task(it.id, it.name)

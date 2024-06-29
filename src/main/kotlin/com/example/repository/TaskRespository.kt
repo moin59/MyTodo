@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository
 
 interface TaskRespository: CrudRepository<Task, Int> {
 
+    fun findTaskByName(name: String): Task
 }
