@@ -8,6 +8,15 @@ data class Task(
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Int?,
-    var name: String?
+    var id: Int?,
+    var name: String,
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "todoId")
+    val todo: Todo? = null
 )
+{
+    override fun toString(): String {
+        return "Task(id=$id, name='$name', todo='${todo!!.id}')"
+    }
+}

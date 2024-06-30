@@ -1,5 +1,4 @@
 package com.example.dto
-
 import jakarta.validation.constraints.NotBlank
 
 
@@ -12,5 +11,6 @@ data class TodoDTO(
     val title: String,
 
     @get: NotBlank(message = "todoDto.description must not be blank")
-    val description: String
+    val description: String,
+
 )

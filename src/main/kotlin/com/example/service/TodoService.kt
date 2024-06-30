@@ -66,4 +66,10 @@ class TodoService(val todoRepository: TodoRepository) {
             throw Exception("Todo not found")
         }
     }
+
+    fun findByTodoId(todoId: Int): Optional<Todo> {
+
+       return todoRepository.findById(todoId)
+
+    }
 }

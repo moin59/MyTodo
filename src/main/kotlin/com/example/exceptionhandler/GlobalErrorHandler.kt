@@ -1,5 +1,6 @@
 package com.example.exceptionhandler
 
+import com.example.exception.TodoNotValidException
 import mu.KLogging
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode
@@ -33,6 +34,15 @@ class GlobalErrorHandler: ResponseEntityExceptionHandler(){
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
             .body(errors.joinToString(","){it})
+    }
+
+    @ExceptionHandler(TodoNotValidException::class)
+    fun TodoNotValidException(ex:TodoNotValidException, request: WebRequest): ResponseEntity<Any>? {
+        logger.error("Exception observed, ${ex.message}", ex)
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+            .body(ex.message)
+
     }
 
     @ExceptionHandler(Exception::class)
