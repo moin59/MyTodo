@@ -12,7 +12,7 @@ data class Task(
     var name: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "todoId")
+    @JoinColumn(name = "todoId", nullable = false)
     val todo: Todo? = null
 )
 {
