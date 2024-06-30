@@ -1,7 +1,6 @@
 package com.example.entity
 
 import jakarta.persistence.*
-import org.hibernate.proxy.HibernateProxy
 
 @Entity
 @Table(name = "tasks")
@@ -16,3 +15,8 @@ data class Task(
     @JoinColumn(name = "todoId")
     val todo: Todo? = null
 )
+{
+    override fun toString(): String {
+        return "Task(id=$id, name='$name', todo='${todo!!.id}')"
+    }
+}

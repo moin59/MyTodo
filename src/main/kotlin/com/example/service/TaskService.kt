@@ -21,13 +21,14 @@ class TaskService(val taskRespository: TaskRespository,
         }
 
        val taskEntity = taskDTO.let {
-            Task(it.id, it.name)
+            Task(it.id, it.name, taskOptional.get())
         }
 
         taskRespository.save(taskEntity)
+        logger.info("Saved task is: $taskEntity")
 
         return taskEntity.let {
-            TaskDTO(it.id, it.name)
+            TaskDTO(it.id, it.name, it.todo!!.id)
         }
     }
 }
